@@ -11,4 +11,5 @@ Folder "tb": Contains all testbench files for the entities and architectures
 Folder "vhdl": Contains all VHDL code for all elements in this projects.
 
 To simulate the entities, start Intel Modelsim and navigate into the "msim" folder (absolute path), then call the simulation files with the "do" command.
-For example: "do sim_alu.do", which simulates the calculators ALU component.
+
+For example: "do sim_alu.do", which starts the simulation of the ALU calculator component.
