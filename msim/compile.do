@@ -1,0 +1,13 @@
+vcom ../vhdl/io_ctrl.vhd
+vcom ../vhdl/io_ctrl_rtl.vhd
+vcom ../vhdl/calc_ctrl.vhd
+vcom ../vhdl/calc_ctrl_rtl.vhd
+vcom ../vhdl/alu.vhd
+vcom ../vhdl/alu_rtl.vhd
+vcom ../vhdl/calc_top.vhd
+vcom ../vhdl/calc_top_rtl.vhd
+vcom ../vhdl/calc_rtl.vhd
+vcom ../tb/tb_io_ctrl.vhd
+vcom ../tb/tb_calc_ctrl.vhd
+vcom ../tb/tb_alu.vhd
+vcom ../tb/tb_calc_top.vhdv

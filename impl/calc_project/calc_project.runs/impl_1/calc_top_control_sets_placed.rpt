@@ -1,0 +1,71 @@
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.1 (win64) Build 1538259 Fri Apr  8 15:45:27 MDT 2016
+| Date         : Fri May 20 14:11:22 2022
+| Host         : DESKTOP-CTQMUAG running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file calc_top_control_sets_placed.rpt
+| Design       : calc_top
+| Device       : xc7a35t
+-------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    18 |
+| Unused register locations in slices containing registers |    54 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               1 |            1 |
+| No           | No                    | Yes                    |             177 |           64 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |              44 |           20 |
+| Yes          | No                    | Yes                    |             136 |           58 |
+| Yes          | Yes                   | No                     |              20 |            6 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++------------------+----------------------------------+----------------------------------+------------------+----------------+
+|   Clock Signal   |           Enable Signal          |         Set/Reset Signal         | Slice Load Count | Bel Load Count |
++------------------+----------------------------------+----------------------------------+------------------+----------------+
+|  s_1khzen_BUFG   |                                  |                                  |                1 |              1 |
+|  s_1khzen_1      | i_calc_ctrl/s_optype_o           | reset_i_IBUF                     |                2 |              4 |
+|  s_1khzen_BUFG   | i_alu/s_op_result[15]_i_1_n_0    |                                  |                1 |              4 |
+|  s_1khzen_1      |                                  | reset_i_IBUF                     |                2 |              5 |
+|  s_1khzen_BUFG   |                                  | reset_i_IBUF                     |                3 |              6 |
+|  s_1khzen_1      | i_calc_ctrl/s_op1[11]_i_1_n_0    | reset_i_IBUF                     |                5 |             12 |
+|  s_1khzen_1      | i_calc_ctrl/s_op2[11]_i_1__0_n_0 | reset_i_IBUF                     |                5 |             12 |
+|  s_1khzen_BUFG   | i_alu/s_op_result[11]_i_1_n_0    |                                  |                7 |             12 |
+|  s_1khzen_BUFG   | i_calc_ctrl/s_mult_counter0      |                                  |                6 |             12 |
+|  s_1khzen_1      | i_calc_ctrl/s_led_o[15]_i_1_n_0  | reset_i_IBUF                     |                7 |             16 |
+|  s_1khzen_BUFG   | i_alu/s_overflow_counter0        |                                  |                6 |             16 |
+|  s_1khzen_BUFG   | i_alu/s_result[15]_i_1_n_0       | reset_i_IBUF                     |                8 |             16 |
+|  s_1khzen_BUFG   | i_calc_ctrl/s_mult_counter0      | i_alu/s_mult_counter[31]_i_1_n_0 |                6 |             20 |
+|  s_1khzen_1      | i_calc_ctrl/s_switch[8]_i_1_n_0  | reset_i_IBUF                     |                8 |             23 |
+|  s_1khzen_BUFG   | i_alu/s_op2                      | reset_i_IBUF                     |                7 |             24 |
+|  s_1khzen_1      | i_calc_ctrl/__0_n_0              | reset_i_IBUF                     |               16 |             29 |
+|  clk_i_IBUF_BUFG |                                  | reset_i_IBUF                     |               15 |             51 |
+|  s_1khzen_0      |                                  | reset_i_IBUF                     |               44 |            115 |
++------------------+----------------------------------+----------------------------------+------------------+----------------+
+
+
